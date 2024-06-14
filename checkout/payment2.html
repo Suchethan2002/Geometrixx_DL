@@ -11,6 +11,7 @@
 
 
     <script>
+                var selectedCardType = 'American Express';
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -18,7 +19,21 @@
                 siteSection: "Checkout",
                 server: "Geometrixx Clothiers Site"
             },
+            transaction:{
+                paymentMethod:selectedCardType
+            }
         };
+
+
+    // Function to update the selected card type variable
+    function updateSelectedCardType() {
+        selectedCardType = document.getElementById('creditcard').value;
+        console.log("the selected value is :", selectedCardType);
+        digitalData.transaction = {
+            paymentMethod: selectedCardType
+        };
+    }
+    console.log("the selected value is :", selectedCardType);
     </script>
 
 
@@ -28,6 +43,7 @@
     <script type="text/javascript" src="http://ats-sb.adobe.com/jjsite/include/scripts/menu.js"></script>
     <script type="text/javascript" src="http://ats-sb.adobe.com/jjsite/include/scripts/searchfield.js"></script>
     <script type="text/javascript" src="http://ats-sb.adobe.com/jjsite/include/scripts/simpleCart.js"></script>
+    <script src="https://assets.adobedtm.com/972de4d5a48f/331391113822/launch-2aee70e60771-development.min.js" async></script>
     <script language="JavaScript" type="text/javascript">
         window.onunload = function() {
             void(0)
@@ -207,7 +223,7 @@
                                     Payment Method:
                                 </td>
                                 <td>
-                                    <select name="creditcard" size="1" class="textinput">
+                                    <select id="creditcard" name="creditcard" size="1" class="textinput" onchange="updateSelectedCardType()">
                                         <option>American Express</option>
                                         <option>BC Card</option>
                                         <option>BCA Card</option>
