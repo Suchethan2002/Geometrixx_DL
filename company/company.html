@@ -17,7 +17,47 @@
                 siteSection: "Company",
                 server: "Geometrixx Clothiers Site"
             },
+
+            events:[],
         };
+
+
+        function handleClick(category, href) {
+    // Log the click event
+    var eventInfo = {
+        eventAction: "ctaClick",
+        eventName: "Click on " + category,
+        eventCategory: category,
+        eventTimestamp: new Date().toISOString(),
+        eventHref: href
+    };
+
+    digitalData.events.push(eventInfo);
+
+    // console.log(eventInfo);
+    // Track the event using Adobe DTM
+
+    
+        _satellite.track('Home_page_Link_Click', {
+        eventAction: eventInfo.eventAction,
+        eventName: eventInfo.eventName,
+        eventCategory: eventInfo.eventCategory
+    });
+    
+    
+   
+
+    // s.tl('Home_page_Link_Click')
+    
+
+    // Output the click information (for testing purposes)
+    // console.log('Clicked on category:', category);
+    console.log('Navigating to:', href);
+
+    // Simulate navigation to the href (replace with actual navigation logic)
+    window.location.href = href;
+}
+
     </script>
 
 
@@ -157,7 +197,7 @@
                                         <a href="#">TV & Video</a>
                                     </div>
                                     <li>
-                                        <a href="../company/company.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">COMPANY</a>
+                                        <a href="../company/company.html" onclick="handleClick('Company')" onmouseover="mopen('m8')" onmouseout="mclosetime()" >COMPANY</a>
                                         <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
                                             <a href="../company/chargecard_application1.html">Geo Charge Card</a>
                                             <a href="../company/travel1.html">Geo Travel</a>
