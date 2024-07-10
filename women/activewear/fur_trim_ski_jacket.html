@@ -19,13 +19,21 @@
                 siteSubsection: "",
                 server: ""
             },
+
             product: {
                 productEvent:'Product View',
-
                 productID: "100241",
-                productName: "Fur Trim Ski Jacket"
+                productName: "Fur Trim Ski Jacket",
+                productCategory:"Women|Activewear",
+                productQty:"1",
+                productPrice:"$2259.99"
             },
         };
+
+        function addToCart(){
+            _satellite.track('add_to_cart');
+            
+        }
     </script>
 
     <title>Geometrixx|Women|Activewear|Fur Trim Ski Jacket</title>
@@ -231,7 +239,7 @@
                             <p>
                                 <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Fur-Trim Ski Jacket','price=2259.99');" name="sku" value="100241" class="button">ADD TO CART</button>
+<button type=submit onclick="addToCart();  simpleCart.add('name=Fur-Trim Ski Jacket','price=2259.99');" name="sku" value="100241" class="button">ADD TO CART</button>
 </form>  
 </span>
 

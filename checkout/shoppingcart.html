@@ -10,6 +10,7 @@
     <!--Place DTM header above this-->
 
 
+    
     <script>
         var digitalData = digitalData || {};
         digitalData = {
@@ -18,8 +19,51 @@
                 siteSection: "Checkout",
                 server: "Geometrixx Clothiers Site"
             },
+
+            cart:{
+                item:[
+                    
+                {
+
+                    product:{
+                        productID: "100241",
+                        productName: "Fur Trim Ski Jacket",
+                        productCategory:"Women|Activewear",
+                        productQty:2,
+                        productPrice:"$2259.99",
+
+                    }
+                },
+                {
+                    product: {
+		    	        productID: "201233",
+	    		        productName: "Tuxedo",
+                        productCategory:"men|Activewear",
+			            productPrice: "$2600.00",
+			            productQty: "1",
+			        }	
+                },
+
+                {product: {
+                productEvent:'Product View',
+                productID: "100240",
+                productName: "Tie-Waist Puffer Jacket",
+                productCategory:"Women|Activewear",
+                productQty:1,
+                productPrice:1849.99,
+            },}
+
+                ]              
+
+            }
             
         };
+
+
+        function handleClick(){
+            // event.preventDefault()
+            _satellite.track('checkout');
+        }
     </script>
 
 
@@ -35,6 +79,7 @@
         window.onunload = function() {
             void(0)
         }
+    // console.log(Name);
     </script>
     <script language="JavaScript">
         <!--if (document.images) {pic1= new Image(200,70); pic1.src="http://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png";}//-->
@@ -49,6 +94,8 @@
 </head>
 
 <body>
+
+
 
 
     <div id="superwrap">
@@ -230,7 +277,7 @@
 
             <div>
                 <form action="shipping1.html">
-                    <input type="submit" value="CHECKOUT NOW!" class="button">
+                    <input onclick="handleClick()" type="submit" value="CHECKOUT NOW!" class="button">
                 </form>
             </div>
 

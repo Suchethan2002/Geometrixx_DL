@@ -134,19 +134,19 @@
                             <!--Menu Start-->
                             <ul id="sddm">
 
-                                <li><a href="../women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">WOMEN</a>
+                                <li><a href="../women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()" onclick="handleClick('women')">WOMEN</a>
                                     <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                        <a href="../women/activewear/activewear.html">Activewear</a>
-                                        <a href="../women/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="../women/activewear/activewear.html" onclick="handleClick('women_activewear')">Activewear</a>
+                                        <a href="../women/fineapparel/fineapparel.html" onclick="handleClick('women_fineapparel')">Fine Apparel</a>
                                         <a href="#">Footwear</a>
                                         <a href="#">Handbags</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()" onclick="handleClick('men')">MEN</a>
                                     <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                        <a href="../men/activewear/activewear.html">Activewear</a>
-                                        <a href="../men/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="../men/activewear/activewear.html" onclick="handleClick('men_activewear')">Activewear</a>
+                                        <a href="../men/fineapparel/fineapparel.html" onclick="handleClick('men_fineapparel')">Fine Apparel</a>
                                         <a href="#">Footwear</a>
                                         <a href="#">Accessories</a>
                                     </div>
@@ -197,13 +197,13 @@
                                         <a href="#">TV & Video</a>
                                     </div>
                                     <li>
-                                        <a href="../company/company.html" onclick="handleClick('Company')" onmouseover="mopen('m8')" onmouseout="mclosetime()" >COMPANY</a>
+                                        <a href="../company/company.html" onclick="handleClick('Company')" onmouseover="mopen('m8')" onmouseout="mclosetime()" onclick="handleClick('company')">COMPANY</a>
                                         <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                            <a href="../company/chargecard_application1.html">Geo Charge Card</a>
-                                            <a href="../company/travel1.html">Geo Travel</a>
-                                            <a href="../company/newsletter1.html">Geo Newsletter</a>
-                                            <a href="../company/activation_dtm.html">Activation (DTM)</a>
-                                            <a href="../company/whitepapers.html">White Papers</a>
+                                            <a href="../company/chargecard_application1.html" onclick="handleClick('chargecard')">Geo Charge Card</a>
+                                            <a href="../company/travel1.html" onclick="handleClick('travel')">Geo Travel</a>
+                                            <a href="../company/newsletter1.html" onclick="handleClick('newsletter')">Geo Newsletter</a>
+                                            <a href="../company/activation_dtm.html" onclick="handleClick('activation_dtm')">Activation (DTM)</a>
+                                            <a href="../company/whitepapers.html" onclick="handleClick('whitepapers')">White Papers</a>
                                         </div>
                                     </li>
                                 </li>
